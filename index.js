@@ -107,7 +107,7 @@ async function fetchObservationImages(speciesId, maxImages = 5) {
   }
 
   console.log(
-    `🖼️ the Collected ${imageUrls.length} images for species ${speciesId}`
+    `🖼️Collected ${imageUrls.length} images for species ${speciesId}`
   );
   return imageUrls;
 }
