@@ -29,11 +29,12 @@ jobs:
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Deploy to Cloud Run
+      - name: Deploy to Google Cloud Functions
         run: |
-          gcloud run deploy field-herper-data-fetcher \
-            --source . \
-            --platform managed \
-            --region us-central1 \
+          gcloud functions deploy field-herper-data-fetcher \
+            --runtime nodejs20 \
+            --trigger-http \
             --allow-unauthenticated \
-            --project mycollectionapp-3a21d
+            --region us-central1 \
+            --project mycollectionapp-3a21d \
+            --entry-point main
