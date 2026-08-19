@@ -4,7 +4,8 @@
   "description": "Cloud Function to fetch iNaturalist species and update Firestore",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "verify": "bash .verify.sh"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -15,4 +16,4 @@
   },
   "author": "Nicholas Eyman",
   "license": "ISC"
-} 
+}
